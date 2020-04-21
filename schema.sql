@@ -10,7 +10,7 @@ CREATE TABLE products (
     department_name VARCHAR(50),
     price DECIMAL (5,2) NOT NULL, 
     stock_quantity INTEGER NOT NULL    
-)
+);
 
 INSERT INTO products(product_name, department_name, price, stock_quantity)
 VALUE ("Sofa", "Furniture", 1200.99, 150);
