@@ -25,4 +25,19 @@ INSERT INTO products(product_name, department_name, price, stock_quantity)
 VALUE ("Tug-of-War Dog Toy", "Pet Supplies", 19.50, 200);
 
 INSERT INTO products(product_name, department_name, price, stock_quantity)
-VALUE ("Keyboard", "Electronics", 16.50, 75);
+VALUE ("Keyboard", "Electronics", 16.50, 75); 
+
+INSERT INTO products(product_name, department_name, price, stock_quantity)
+VALUE ("Cell Phone", "Electronics", 445.99, 100); 
+
+INSERT INTO products(product_name, department_name, price, stock_quantity)
+VALUE ("Dining Room Chair", "Furniture", 125.50, 400); 
+
+INSERT INTO products(product_name, department_name, price, stock_quantity)
+VALUE ("Dry Dog Food", "Pet Supplies", 49.80, 60); 
+
+INSERT INTO products(product_name, department_name, price, stock_quantity)
+VALUE ("Coffee Maker", "Kitchen", 76.85, 123); 
+
+INSERT INTO products(product_name, department_name, price, stock_quantity)
+VALUE ("Garden Seeds", "Home & Garden", 1.59, 90); 
