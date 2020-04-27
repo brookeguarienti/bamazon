@@ -122,7 +122,7 @@ function buyItem() {
           `\nYou have chosen: ${userResponse.units} of ${response[0].product_name} to buy.\n`
         );
         if (userResponse.units >= response[0].stock_quantity) {
-          console.log("insufficient quantity");
+          console.log(chalk.red `Insufficient quantity!\n\n`);
           optionMenu();
         } else {
           console.log("order processing");
