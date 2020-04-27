@@ -15,12 +15,14 @@ var connection = mysql.createConnection({
   database: "bamazon_DB",
 });
 
+// connect to mysql server and sql database
 connection.connect(function (err) {
   if (err) throw err;
   console.log(`connected as id ${connection.threadId}`);
   optionMenu();
 });
 
+// function to grab all products from the database and display them to the screen in a table
 function showAllProducts() {
   var query = "SELECT * FROM products";
   connection.query(query, function (err, res) {
@@ -46,6 +48,7 @@ function showAllProducts() {
   });
 }
 
+// function to prompt user the question of making a purchase or to exit the store
 function optionMenu() {
   inquirer
     .prompt({
@@ -67,6 +70,7 @@ function optionMenu() {
     });
 }
 
+// function to prompt user which items they would like to purchase and the quantity
 function buyItem() {
   inquirer
     .prompt([
