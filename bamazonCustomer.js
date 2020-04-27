@@ -60,7 +60,7 @@ function optionMenu() {
           showAllProducts();
           break;
         case "Exit":
-          console.log(`Thanks for visiting Bamazon!`);
+          console.log(chalk.green `Thanks for visiting Bamazon!`);
           connection.end();
           break;
       }
@@ -105,12 +105,13 @@ function buyItem() {
       // connect to entire table to pull and append data from specific columns
     ])
     .then(function (userResponse) {
+      if(userResponse.confirmation === false){
+          console.log(chalk.red `Please re-enter the item and quantity you would like to purchase. `);
+          buyItem();
+      } else{
       var query = "SELECT * FROM products WHERE ?";
       // query the database for all items available and assigning item_id column to user choice
-      connection.query(query, { item_id: userResponse.itemID }, function (
-        err,
-        response
-      ) {
+      connection.query(query, { item_id: userResponse.itemID }, function (err,response){
         if (err) throw err;
         // inform customer of how many units they have purchased
         console.log(
@@ -134,11 +135,11 @@ function buyItem() {
               `\nThank you for your purchase. Your total comes to $${totalCost}.\n`
             );
             console.log(`\nWe look forward to seeing you soon!\n`);
-            
-            connection.end();
-            // optionMenu();
+            optionMenu();
+            // connection.end();
           });
         }
       });
+    }
     });
 }
