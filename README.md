@@ -7,6 +7,6 @@ The user will first open the terminal and navigate to the javascript file.
 Then, enter the following:
 
   ```node bamazonCustomer.js```
-
-    ![bamazon-1](screenshots/bamazon1.png)
+   
+  ![bamazon-img-1](screenshots/bamazon1.png)
 
